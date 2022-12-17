@@ -20,13 +20,13 @@ from django.views.generic.base import TemplateView # agregado
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
-    path('quienes-somos/', quienes_somos),
-    path('proyectos/', proyectos),
-    path('servicios/', servicios),
-    path('publicaciones/', publicaciones),
-    path('areas-de-estudio/', areas_de_estudio),
-    path('crear-post', crear_post),
+    path('', home, name='home'),
+    path('quienes-somos/', quienes_somos, name='quienes_somos'),
+    path('proyectos/', proyectos, name='proyectos'),
+    path('servicios/', servicios, name='servicios'),
+    path('publicaciones/', publicaciones, name='publicaciones'),
+    path('areas-de-estudio/', areas_de_estudio, name='areas_de_estudio'),
+    path('crear-post', crear_post, name='crear_post'),
 
     path('registro/', registroUsuario, name='registro'), #agregado
     path('accounts/', include('django.contrib.auth.urls')), #agregado
